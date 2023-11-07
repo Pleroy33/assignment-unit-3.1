@@ -10,7 +10,8 @@ console.log('Animals are: ', animalArray);
 // 1. TODO: Make an array `favoriteFoods` with some favorite foods.
 //    Be sure to console.log your array of foods to the console with
 //    a message, similar to the example above.
-
+let favoriteFoods = ['pickles', 'steak', 'nogiri', 'stir fry'];
+console.log('Some favorite foods are ', favoriteFoods);
 
 // Array.length: A property that tells you how many items are in a given array.
 console.log('--- 2. Length of an array ---');
@@ -23,6 +24,8 @@ console.log('Number of animals:', numberOfAnimals);
 //    to assign it the number value of how many items are inside `favoriteFoods`.
 //    Don't forget to console.log `numberOfFoods` to make sure your code worked!
 
+let numberOfFoods = favoriteFoods.length;
+console.log('The number of favorite foods is ', numberOfFoods);
 
 // Accessing array items
 console.log('--- 3. Accessing items in an array ---');
@@ -35,19 +38,20 @@ console.log('First animal is', firstAnimal);
 //      of the second item from the `animalArray`.
 //      Be sure to console.log this new variable to make sure your code
 //      worked as expected.
-
+let secondAnimal = animalArray[1];
+console.log('Second animal is a', secondAnimal);
 
 // 3.b. TODO: Create a variable `lastAnimal` and assign it the value of
 //      the "last" item in `animalArray`, using its array index.
 //      You'll need to console.log `animalArray` and `lastAnimal` to make
 //      sure that your code does what you want. (Never trust your code until
 //      you have proof that it works!)
-
+let lastAnimal = animalArray.indexOf(3);
+console.log('The last animal is a', lastAnimal);
 // 3.c. (STRETCH) TODO: Refactor 3.b to use the `animalArray` variable's .length 
 //       property, rather than the exact (hardcoded) index number of the last item.
 
-
-
+console.log('The last animal is a', animalArray[animalArray.length - 1]);
 // Adding & Removing Array Items
 console.log('--- 4. Adding and removing array items ---');
 
