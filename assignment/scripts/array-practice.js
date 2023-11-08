@@ -46,8 +46,10 @@ console.log('Second animal is a', secondAnimal);
 //      You'll need to console.log `animalArray` and `lastAnimal` to make
 //      sure that your code does what you want. (Never trust your code until
 //      you have proof that it works!)
+
 let lastAnimal = animalArray[3];
 console.log('The last animal is a', lastAnimal);
+console.log(`${animalArray}`);
 // 3.c. (STRETCH) TODO: Refactor 3.b to use the `animalArray` variable's .length 
 //       property, rather than the exact (hardcoded) index number of the last item.
 
@@ -66,7 +68,7 @@ console.log('Added an animal to end,', animalArray);
 //      array. (How can you be 100% certain this worked? 🤔)
 let dessert = 'key lime pie';
 favoriteFoods.push(dessert);
-console.log(favoriteFoods);
+console.log(`${favoriteFoods}`);
 
 // Example: Add to the beginning of an array using the Array.unshift method.
 let animalToUnshift = 'walrus';
@@ -76,7 +78,9 @@ console.log(`Added an animal to beginning: ${animalArray}`);
 // 4.b. TODO: Create a variable `entree` and assign it a string value of
 //      an entree that you enjoy.
 //      Add the `entree` to the beginning of your `favoriteFoods` array.
-
+let entree = 'fajitas';
+favoriteFoods.unshift(entree);
+console.log(`Added my favorite entree to the beginning of favorite foods: ${favoriteFoods}`);
 
 // Example: Remove the last animal by using the Array.pop method.
 let removedAnimal = animalArray.pop();
@@ -92,6 +96,9 @@ let colors = ['orange', 'yellow', 'green', 'teal'];
 //      Don't forget! Use console.log to verify that the `colors`
 //      array only contains three items now, AND to verify that `lastColor`
 //      contains the value "teal".)
+let lastColor = colors.pop();
+console.log('Removed the last color', colors);
+console.log('The colors left are', lastColor);
 
 
 // Example: Remove the first animal using the Array.shift method.
@@ -102,6 +109,8 @@ console.log('The animals are now', animalArray);
 // 4.d. TODO: Remove the first value from the `colors` array and store it
 //      inside a new variable called `firstColor`.
 //      To verify that your code worked, console.log `firstColor`!  
+firstColor = colors.shift();
+console.log('Removed the first color', firstColor);
 
 
 
@@ -112,11 +121,17 @@ let gems = ['Topaz', 'Citrine', 'Diamond', 'Emerald', 'Iolite', 'Tanzanite'];
 
 // 5.a (STRETCH) TODO: Replace the second gem with 'Tourmaline'.
 //      Remember to console.log the updated array.
+gems.splice(1, 1, 'Tourmaline'); //starting at index [1], removed variable 'Citrine', added variable 'Tourmaline'
+console.log(gems);//logged result 
+
+
 
 
 // 5.b (STRETCH) TODO: Sort your gems array in reverse alphabetical order.
 //     Please console.log the sorted array.
-
+gems.sort(); //sort the array aphabetically 
+gems.reverse();//reverses the array 
+console.log(gems);// logged result
 
 // 5.c (STRETCH) TODO: Create a variable `gemString` and assign it a string value
 //     that's made up of each value from the `gems` array, but separated by the
